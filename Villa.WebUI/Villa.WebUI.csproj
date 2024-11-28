@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="bootstrap" Version="5.3.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
@@ -14,6 +15,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Villa.Busines\Villa.Business.csproj" />
     <ProjectReference Include="..\Villa.DataAccess\Villa.DataAccess.csproj" />
+    <ProjectReference Include="..\Villa.Dto\Villa.Dto.csproj" />
+    <ProjectReference Include="..\Villa.Entity\Villa.Entity.csproj" />
   </ItemGroup>
 
 </Project>
