@@ -18,7 +18,6 @@ namespace Villa.WebUI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddServiceExtensions();
             builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

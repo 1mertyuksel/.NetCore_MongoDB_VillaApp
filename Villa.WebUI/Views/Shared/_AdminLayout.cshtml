@@ -60,11 +60,8 @@
         <!--**********************************
             Footer start
         ***********************************-->
-        <div class="footer">
-            <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">Quixkit</a> 2019</p>
-            </div>
-        </div>
+        @await Component.InvokeAsync("_AdminFooter")
+
         <!--**********************************
             Footer end
         ***********************************-->
@@ -82,13 +79,12 @@
     ***********************************-->
     <!--**********************************
         Scripts
-    ***********************************-->
-    <!-- Required vendors -->
-    <script src="~/focus-2/vendor/global/global.min.js"></script>
-    <script src="~/focus-2/js/quixnav-init.js"></script>
-    <script src="~/focus-2/js/custom.min.js"></script>
 
-    <script src="./vendor/highlightjs/highlight.pack.min.js"></script>
+    ***********************************-->
+    @await Component.InvokeAsync("_AdminScripts")
+
+    <!-- Required vendors -->
+    
     <!-- Circle progress -->
 
 </body>
