@@ -1,0 +1,49 @@
+﻿@model UpdateDealDto
+@{
+    ViewData["Title"] = "Teklif Güncelleme Sayfası";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <label>İlan Türü</label>
+    <input type="text" asp-for="Type" class="form-control" />
+    <br />
+
+    <label>Resim URL</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <br />
+
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+
+    <label>Açıklama</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+
+    <label>Metrekare</label>
+    <input type="text" asp-for="Square" class="form-control" />
+    <br />
+
+    <label>Kat</label>
+    <input type="text" asp-for="Floor" class="form-control" />
+    <br />
+
+    <label>Oda Sayısı</label>
+    <input type="text" asp-for="RoomCount" class="form-control" />
+    <br />
+
+    <label>Otopark Alanı Var mı?</label>
+    <select asp-for="HasParkingArea" class="form-control">
+        <option value="true">Var</option>
+        <option value="false">Yok</option>
+    </select>
+    <br />
+
+    <label>Ödeme Türü</label>
+    <input type="text" asp-for="PaymentType" class="form-control" />
+    <br />
+
+    <button type="submit" class="btn btn-outline-dark">Kaydet</button>
+</form>
