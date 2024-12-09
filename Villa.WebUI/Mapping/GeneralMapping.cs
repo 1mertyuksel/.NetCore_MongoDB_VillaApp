@@ -28,11 +28,11 @@ namespace Villa.WebUI.Mapping
             CreateMap<UpdateCounterDto, Counter>().ReverseMap();
             CreateMap<CreateCounterDto, Counter>().ReverseMap();
 
-            CreateMap<ResultDealDto, Deal>().ReverseMap();
+            CreateMap<Dto.Dtos.DealDtos.ResultDealDto, Deal>().ReverseMap();
             CreateMap<UpdateDealDto, Deal>().ReverseMap();
             CreateMap<CreateDealDto, Deal>().ReverseMap();
 
-            CreateMap<ResultFeatureDto, Feature>().ReverseMap();
+            CreateMap<Dto.Dtos.FeatureDtos.ResultFeatureDto, Feature>().ReverseMap();
             CreateMap<UpdateFeatureDto, Feature>().ReverseMap();
             CreateMap<CreateFeatureDto, Feature>().ReverseMap();
 
