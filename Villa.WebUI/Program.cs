@@ -1,4 +1,5 @@
- using Microsoft.EntityFrameworkCore;
+using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
 using System.Reflection;
 using Villa.Business.Abstract;
@@ -29,6 +30,7 @@ namespace Villa.WebUI
                 option.UseMongoDB(mongoDatabase.Client, mongoDatabase.DatabaseNamespace.DatabaseName);
             });
 
+            builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 
             builder.Services.AddControllersWithViews();

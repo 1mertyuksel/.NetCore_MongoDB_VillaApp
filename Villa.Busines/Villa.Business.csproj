@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Villa.Entity\Villa.Entity.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Validators\" />
-  </ItemGroup>
-
 </Project>

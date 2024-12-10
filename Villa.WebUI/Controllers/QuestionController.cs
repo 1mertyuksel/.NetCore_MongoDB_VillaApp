@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using Villa.Business.Abstract;
+using Villa.Business.Validators;
 using Villa.Dto.Dtos.QuestDtos;
 using Villa.Entity.Entities;
 
@@ -40,6 +42,16 @@ public class QuestionController : Controller
     public async Task<IActionResult> CreateQuestion(CreateQuestDto createQuestDto)
     {
         var newQuestion = _mapper.Map<Quest>(createQuestDto);
+        var validator = new QuestionValidator();
+        var result = validator.Validate(newQuestion);
+            if (!result.IsValid)
+        {
+            result.Errors.ForEach(x =>
+            {
+                ModelState.AddModelError(x.PropertyName, x.ErrorMessage);
+            });
+            return View();  
+        }
         await _questionService.TCreateAsync(newQuestion);
         return RedirectToAction("Index");
     }
