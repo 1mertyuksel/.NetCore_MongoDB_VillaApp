@@ -4,14 +4,20 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <form method="post">
-    <label> Resim Url</label>
+    <label>Resim Url</label>
     <input type="text" asp-for="ImageUrl" class="form-control" />
+    <span asp-validation-for="ImageUrl" class="text-danger"></span>
     <br />
-    <label> Şehirl</label>
+
+    <label>Şehir</label>
     <input type="text" asp-for="City" class="form-control" />
+    <span asp-validation-for="City" class="text-danger"></span>
     <br />
-    <label> Başlık</label>
+
+    <label>Başlık</label>
     <input type="text" asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span>
     <br />
-    <button class="btn btn-outline-dark"> Kaydet</button>
+
+    <button class="btn btn-outline-dark">Kaydet</button>
 </form>

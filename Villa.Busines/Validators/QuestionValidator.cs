@@ -8,7 +8,7 @@ using Villa.Entity.Entities;
 
 namespace Villa.Business.Validators
 {
-    public class QuestionValidator: AbstractValidator<Quest>
+    public class QuestionValidator : AbstractValidator<Quest>
     {
         public QuestionValidator()
         {

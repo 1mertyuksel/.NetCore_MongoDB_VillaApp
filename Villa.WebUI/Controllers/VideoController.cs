@@ -4,6 +4,7 @@ using MongoDB.Bson;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Villa.Business.Abstract;
+using Villa.Business.Validators;
 using Villa.Dto.Dtos.VideoDtos;
 using Villa.Entity.Entities;
 
@@ -44,6 +45,16 @@ public class VideoController : Controller
             return View(createVideoDto);
         }
         var newVideo = _mapper.Map<Video>(createVideoDto);
+        var validator = new VideoValidator();
+        var result = validator.Validate(newVideo);
+        if (!result.IsValid)
+        {
+            result.Errors.ForEach(x =>
+            {
+                ModelState.AddModelError(x.PropertyName, x.ErrorMessage);
+            });
+            return View();
+        }
         await _videoService.TCreateAsync(newVideo);
         return RedirectToAction("Index");
     }

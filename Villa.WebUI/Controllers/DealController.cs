@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using Villa.Business.Abstract;
+using Villa.Business.Validators;
 using Villa.Dto.Dtos.DealDtos;
 using Villa.Entity.Entities;
 
@@ -40,6 +41,16 @@ namespace Villa.WebUI.Controllers
         public async Task<IActionResult> CreateDeal(CreateDealDto createDealDto)
         {
             var newDeal = _mapper.Map<Deal>(createDealDto);
+            var validator = new DealValidator();
+            var result = validator.Validate(newDeal);
+            if (!result.IsValid)
+            {
+                result.Errors.ForEach(x =>
+                {
+                    ModelState.AddModelError(x.PropertyName, x.ErrorMessage);
+                });
+                return View();
+            }
             await _dealService.TCreateAsync(newDeal);
             return RedirectToAction("Index");
         }

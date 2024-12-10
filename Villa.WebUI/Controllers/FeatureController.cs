@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using Villa.Business.Abstract;
+using Villa.Business.Validators;
 using Villa.Dto.Dtos.FeatureDtos;
 using Villa.Entity.Entities;
 
@@ -39,6 +40,16 @@ namespace Villa.WebUI.Controllers
         public async Task<IActionResult> CreateFeature(CreateFeatureDto createFeatureDto)
         {
             var newFeature = _mapper.Map<Feature>(createFeatureDto);
+            var validator = new FeatureValidator();
+            var result = validator.Validate(newFeature);
+            if (!result.IsValid)
+            {
+                result.Errors.ForEach(x =>
+                {
+                    ModelState.AddModelError(x.PropertyName, x.ErrorMessage);
+                });
+                return View();
+            }
             await _featureService.TCreateAsync(newFeature);
             return RedirectToAction("Index");
         }
