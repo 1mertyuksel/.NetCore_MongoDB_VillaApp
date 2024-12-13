@@ -35,6 +35,9 @@ namespace Villa.WebUI.Extensions
             Services.AddScoped<IQuestDal, EfQuestDal>();
             Services.AddScoped<IQuestService, QuestManager>();
 
+            Services.AddScoped<ISubHeaderDal, EfSubHeaderDal>();
+            Services.AddScoped<ISubHeaderService, SubHeaderManager>();
+
             Services.AddScoped<IVideoDal, EfVideoDal>();
             Services.AddScoped<IVideoService, VideoManager>();
 

@@ -1,0 +1,38 @@
+﻿@model CreateSubHeaderDto
+@{
+    ViewData["Title"] = "Yeni Alt Başlık Ekleme Sayfası";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<form method="post">
+    <label> Adres</label>
+    <input type="text" asp-for="Adress" class="form-control" />
+    <span asp-validation-for="Adress" class="text-danger"></span>
+    <br />
+
+    <label> Email</label>
+    <input type="email" asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+    <br />
+
+    <label> Facebook</label>
+    <input type="text" asp-for="Facebook" class="form-control" />
+    <span asp-validation-for="Facebook" class="text-danger"></span>
+    <br />
+
+    <label> Twitter</label>
+    <input type="text" asp-for="Twitter" class="form-control" />
+    <span asp-validation-for="Twitter" class="text-danger"></span>
+    <br />
+
+    <label> Linkedin</label>
+    <input type="text" asp-for="Linkedin" class="form-control" />
+    <span asp-validation-for="Linkedin" class="text-danger"></span>
+    <br />
+
+    <label> Instagram</label>
+    <input type="text" asp-for="Instagram" class="form-control" />
+    <span asp-validation-for="Instagram" class="text-danger"></span>
+    <br />
+
+    <button class="btn btn-outline-dark"> Kaydet</button>
+</form>
