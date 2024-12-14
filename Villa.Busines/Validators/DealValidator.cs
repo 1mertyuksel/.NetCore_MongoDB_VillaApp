@@ -11,10 +11,6 @@ namespace Villa.Business.Validators
                 .NotEmpty().WithMessage("Type cannot be empty.")
                 .MaximumLength(50).WithMessage("Type must not exceed 50 characters.");
 
-            RuleFor(deal => deal.ImageUrl)
-                .NotEmpty().WithMessage("Image URL cannot be empty.")
-                .Must(url => Uri.TryCreate(url, UriKind.Absolute, out _))
-                .WithMessage("Image URL must be a valid URL.");
 
             RuleFor(deal => deal.Title)
                 .NotEmpty().WithMessage("Title cannot be empty.")
