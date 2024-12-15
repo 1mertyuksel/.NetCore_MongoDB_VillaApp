@@ -7,10 +7,7 @@ namespace Villa.Business.Validators
     {
         public ProductValidator()
         {
-            RuleFor(product => product.ImageUrl)
-                .NotEmpty().WithMessage("Image URL cannot be empty.")
-                .Must(url => Uri.TryCreate(url, UriKind.Absolute, out _))
-                .WithMessage("Image URL must be a valid URL.");
+           
 
             RuleFor(product => product.Category)
                 .NotEmpty().WithMessage("Category cannot be empty.")
