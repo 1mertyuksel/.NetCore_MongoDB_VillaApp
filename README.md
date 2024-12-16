@@ -16,16 +16,12 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <a href="https://github.com/1mertyuksel/.NetCore_MongoDB_VillaApp">
-    <img src="Villa.WebUI/wwwroot/imagesReadme/Anasayfa.png" alt="Logo" width="590" height="288">
-  </a>
+<div>
 
   <h2 align="center">Villa App</h2>
 
   <p align="center">
     <br />
-    <!-- <a href="https://github.com/your_username/repo_name">View Demo</a> -->
     <a href="mailto:mertyuksel680@gmail.com?subject=Bug%20Report">Report Bug</a>
   </p>
 </div>
@@ -51,7 +47,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Home](imagesReadme/Anasayfa.png)
+![Home](Villa.WebUI/wwwroot/imagesReadme/AnaSayfa.png)
 
 The **Villa Management System** is built using **.NET Core** and **MongoDB** to manage villa listings efficiently. This system implements modern software development practices and follows a **multi-layered (N-Tier) architecture** for better scalability and maintainability. 
 
@@ -95,15 +91,21 @@ Follow these steps to install and set up the application:
 ### 1. Home Page
 - View available villas and their details.
 ![Home Page Screenshot](Villa.WebUI/wwwroot/imagesReadme/AnaSayfa.png)
+
+
 ![Product Page Screenshot](Villa.WebUI/wwwroot/imagesReadme/Products.png)
 
 ### 2. Admin Login Page
 - Secure login for administrators to manage the application.
 ![Login Page Screenshot](Villa.WebUI/wwwroot/imagesReadme/Login.png)
 
+![Login Page Screenshot](Villa.WebUI/wwwroot/imagesReadme/Register.png)
+
 ### 3. Villa Management (Admin Panel)
 - Add, edit, or delete villa listings.
-![Villa Management Screenshot](Villa.WebUI/wwwroot/imagesReadme/ProductCreate.png)
+![Villa Management Screenshot](Villa.WebUI/wwwroot/imagesReadme/Product_Index.png)
+
+
 ![Validation Screenshot](Villa.WebUI/wwwroot/imagesReadme/CreateValidation.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -131,10 +133,10 @@ Distributed under the MIT License. See [LICENSE.txt](./LICENSE.txt) for more inf
 <!-- CONTACT -->
 ## Contact
 
-I’d love to hear from you! Whether you have questions, feedback, or just want to connect, feel free to reach out to us through the following channels:
+I’d love to hear from you! Whether you have questions, feedback, or just want to connect, feel free to reach out to me through the following channels:
 
 - **Mert Yüksel** - [LinkedIn](https://www.linkedin.com/in/mert-yüksel/) - mertyuksel680@gmail.com  
-  Feel free to connect with me on LinkedIn for updates and professional networking. For any inquiries or support, don’t hesitate to drop me an email. We’re here to assist you and look forward to engaging with you!
+  Feel free to connect with me on LinkedIn for updates and professional networking. For any inquiries or support, don’t hesitate to drop me an email. I am here to assist you and look forward to engaging with you!
 
 Project Link: [Villa App](https://github.com/1mertyuksel/.NetCore_MongoDB_VillaApp)
 
