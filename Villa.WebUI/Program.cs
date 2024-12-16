@@ -8,6 +8,7 @@ using Villa.DataAccess.Abstract;
 using Villa.DataAccess.Context;
 using Villa.DataAccess.EntityFramework;
 using Villa.DataAccess.Repositories;
+using Villa.Entity.Entities;
 using Villa.WebUI.Extensions;
 
 namespace Villa.WebUI
@@ -29,6 +30,8 @@ namespace Villa.WebUI
             {
                 option.UseMongoDB(mongoDatabase.Client, mongoDatabase.DatabaseNamespace.DatabaseName);
             });
+
+            builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<VillaContext>();
 
             builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
