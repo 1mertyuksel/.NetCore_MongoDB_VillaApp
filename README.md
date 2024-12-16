@@ -22,7 +22,7 @@
 
   <p align="center">
     <br />
-    <a href="mailto:mertyuksel680@gmail.com?subject=Bug%20Report">Report Bug</a>
+    
   </p>
 </div>
 
@@ -137,6 +137,7 @@ I’d love to hear from you! Whether you have questions, feedback, or just want 
 
 - **Mert Yüksel** - [LinkedIn](https://www.linkedin.com/in/mert-yüksel/) - mertyuksel680@gmail.com  
   Feel free to connect with me on LinkedIn for updates and professional networking. For any inquiries or support, don’t hesitate to drop me an email. I am here to assist you and look forward to engaging with you!
+<a href="mailto:mertyuksel680@gmail.com?subject=Bug%20Report">Report Bug</a>
 
 Project Link: [Villa App](https://github.com/1mertyuksel/.NetCore_MongoDB_VillaApp)
 
