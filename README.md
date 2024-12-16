@@ -69,7 +69,7 @@ To get started with the Villa App project, follow these steps to set it up and r
 
 Before running the project, make sure you have the following tools installed:
 
-- **.NET SDK**: Install .NET Core 8.0 or newer. [Download .NET SDK](https://dotnet.microsoft.com/download)
+- **.NET SDK**: Install .NET 8.0 or newer. [Download .NET SDK](https://dotnet.microsoft.com/download)
 - **MongoDB Server**: Install MongoDB for database management. [Download MongoDB Server](https://www.mongodb.com/try/download/community)
 
 ### Installation
@@ -79,6 +79,8 @@ Follow these steps to install and set up the application:
 1. Clone the repository
    ```sh
    git clone https://github.com/1mertyuksel/.NetCore_MongoDB_VillaApp.git
+   cd .NetCore_MongoDB_VillaApp
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -137,7 +139,7 @@ I’d love to hear from you! Whether you have questions, feedback, or just want 
 
 - **Mert Yüksel** - [LinkedIn](https://www.linkedin.com/in/mert-yüksel/) - mertyuksel680@gmail.com  
   Feel free to connect with me on LinkedIn for updates and professional networking. For any inquiries or support, don’t hesitate to drop me an email. I am here to assist you and look forward to engaging with you!
-<a href="mailto:mertyuksel680@gmail.com?subject=Bug%20Report">Report Bug</a>
+
 
 Project Link: [Villa App](https://github.com/1mertyuksel/.NetCore_MongoDB_VillaApp)
 
